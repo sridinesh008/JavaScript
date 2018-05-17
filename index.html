@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Dinesh Kumar</h1>
+
+    <div id="slideShow">
+        Slide SHow will Come Here!!!
+        <img src ="image1.jpg" alt="it is not in its place">
+        <img id ="slide" src ="image001.jpg" alt="it is not in its place">
+    </div>
+
+
+    <h3> Testing Live server</h3>
+    <h1>Timer</h1>
+    <h1 id="timer" >Timer will come here </h1>
+    <h1 id="decTimer">Dec Timer comes here</h1>
+    <script>
+        var number =5;
+        var number1="5";
+        var boolean = true;
+        var myArray=["chennai","Salem","bangalore"]
+        document.write("<br>"+"hfhfggh")
+        
+        console.log("hello JS");
+        console.log(number+number1);
+        console.log(myArray);
+        console.log(myArray.push("Trichy"));
+        console.log(myArray.length);
+        console.log(myArray.splice(1,2));
+        console.log(myArray);
+        document.write("<br>"+Math.floor(Math.random()*10));
+        document.write("<br>"+Math.floor(Math.random() * (10 - 1)+1 ));
+        document.write("<br>"+Math.floor(Math.random() * (100 - 1)+1));
+        
+        if (number1>4) {
+            document.write("<br>"+" Greater");
+        }
+
+        for (let index = 0; index < myArray.length; index++) {
+            document.write("<br>"+myArray[index]);
+        }
+
+        var person ={
+                    name:"dinesh",
+                    age:12,
+                    Company:"cts"}
+        document.write("<br>"+person.age)
+        person.age=700;
+        document.write("<br>"+person.age);
+        person["salary"]="nothingBig";
+        console.log(person);
+        
+        // its Commnet
+        myFunction(person.age);
+            function myFunction(name) {
+                document.write("<br>"+"I was called by You,function"+"My age is "+name);
+            }
+
+            function myFunction1() {
+                document.write("<br>"+"I was called by You ,function1");
+            }
+            myFunction1();
+            myfunction5=function myFunction1() {
+                clearInterval(myTime,10000);
+            }
+
+            //alert("hi from alert");
+            //capture = prompt("say hello");
+            //console.log(capture);
+            //alert(capture);
+
+            //setTimeout(myFunction,2000);
+            //var myTime = setInterval(myFunction1,2000);
+            //setTimeout(myfunction5,10000);
+
+           
+            function getTime() {
+                var present = new Date();
+            //document.write("<br>"+present.getHours()+
+                //":"+present.getMinutes()+":"+present.getSeconds());
+                var tposition = document.getElementById("timer");
+                if(present.getSeconds()<10){tposition.innerHTML = present.getHours()+
+                ":"+present.getMinutes()+":"+0+present.getSeconds();
+                }else{
+                    tposition.innerHTML = present.getHours()+
+                ":"+present.getMinutes()+":"+present.getSeconds();
+                }
+            }
+           
+            function getTimer()
+                    { 
+                    var current_date = new Date(); 
+                    hour = current_date.getHours();
+                    minute = current_date.getMinutes();
+                    sec = current_date.getSeconds();
+                    if(sec<10)
+                    {
+                    sec = "0"+sec;
+                    }
+                    if(minute<10)
+                    {
+                    minute = "0"+minute;
+                    }
+                    if(hour<10)
+                    {
+                    hour = "0"+hour;
+                    }
+
+                    hour1 = 16 - hour;
+                    min1 = 60 - minute;
+                    sec1 = 60 - sec;
+
+                    if(sec1<10)
+                    {
+                    sec1 = "0"+sec1;
+                    }
+                    if(min1<10)
+                    {
+                    min1 = "0"+min1;
+                    }
+                    if(hour1<10)
+                    {
+                    hour1 = "0"+hour1;
+                    }
+
+                    console.log(hour+":"+minute+":"+sec)
+                    var tPosition = document.getElementById("timer");
+
+                    var tPositionDec = document.getElementById("decTimer");
+
+                    tPosition.innerHTML = hour+":"+minute+":"+sec;
+
+                    tPositionDec.innerHTML = hour1+":"+min1+":"+sec1;
+                    }
+
+            //setInterval(getTimer,1000); 
+
+
+            setInterval(getTime,1000);
+           
+    </script>
+    <script src="slideShow.js" ></script>
+
+</body>
+</html>
